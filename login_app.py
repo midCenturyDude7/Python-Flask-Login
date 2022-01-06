@@ -1,10 +1,9 @@
-from flask import Flask, render_template
+from flask import render_template
+from app import create_app
 
+app = create_app()
 
-app = Flask(__name__)
-
-
-@app.route('/app/templates')
+@app.route('/')
 def index():
     return render_template('index.html')
 
